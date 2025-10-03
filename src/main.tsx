@@ -5,4 +5,6 @@ import App from './components/App/App';
 import "modern-normalize";
 import "./index.css";
 
-createRoot(document.getElementById("root")  as HTMLDivElement).render(<App/>)
+createRoot(document.getElementById("root")  as HTMLDivElement).render(<StrictMode>
+  <App />
+</StrictMode>)
