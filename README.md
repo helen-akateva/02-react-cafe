@@ -4,7 +4,7 @@ A simple and interactive cafe feedback application built with React and TypeScri
 
 ## 🚀 Demo
 
-[Live Demo](https://helen-akateva.github.io/cafe-feedback-app/)
+[Live Demo](https://cafe-feedback-app.vercel.app/)
 
 ## 📋 Description
 
