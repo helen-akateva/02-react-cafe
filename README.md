@@ -1,73 +1,92 @@
-# React + TypeScript + Vite
+# Cafe Feedback App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and interactive cafe feedback application built with React and TypeScript. This project allows visitors to rate their cafe experience with good, neutral, or bad feedback, view statistics, and reset the votes.
 
-Currently, two official plugins are available:
+## 🚀 Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[Live Demo](https://helen-akateva.github.io/cafe-feedback-app/)
 
-## React Compiler
+## 📋 Description
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+This application demonstrates a feedback collection system for a cafe. Users can:
+- Vote for their experience (Good, Neutral, or Bad)
+- View real-time statistics of collected feedback
+- See the percentage of positive feedback
+- Reset all votes to start fresh
 
-## Expanding the ESLint configuration
+The app showcases React state management, TypeScript integration, and component-based architecture with a clean, modular structure.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Technologies
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **React** 19.1.1 - UI library
+- **TypeScript** 5.9.3 - Type safety and better developer experience
+- **Vite** (Rolldown) - Fast build tool and development server
+- **CSS Modules** - Scoped styling
+- **Modern Normalize** - CSS reset for consistent styling across browsers
+- **ESLint** - Code linting and quality assurance
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## ✨ Features
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Interactive voting interface with three feedback options
+- Real-time statistics display
+- Positive feedback rate calculation
+- Reset functionality to clear all votes
+- Responsive and clean user interface
+- TypeScript for type safety
+- Component-based architecture
+- Modern React hooks (useState)
+
+## 📦 Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/helen-akateva/cafe-feedback-app.git
+cd cafe-feedback-app
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Install dependencies:
+```bash
+npm install
 ```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+4. Open your browser and navigate to `http://localhost:5173`
+
+## 🏗️ Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+
+## 📁 Project Structure
+
+```
+src/
+├── components/
+│   ├── App/           # Main application component
+│   ├── CafeInfo/      # Cafe information display
+│   ├── VoteOptions/   # Voting buttons interface
+│   ├── VoteStats/     # Statistics display
+│   └── Notification/  # No votes notification
+├── types/             # TypeScript type definitions
+├── assets/            # Static assets
+└── index.css          # Global styles
+```
+
+## 👩‍💻 Author
+
+**Olena Akatieva**
+
+- LinkedIn: [linkedin.com/in/olena-akatieva](https://linkedin.com/in/olena-akatieva)
+- GitHub: [@helen-akateva](https://github.com/helen-akateva)
+
+---
+
+## 📝 License
+
+This project is created for educational purposes.
